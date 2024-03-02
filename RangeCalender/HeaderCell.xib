@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HeaderCellk" id="gTV-IL-0wX" customClass="HeaderCell" customModule="RangeCalender" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="148" height="51"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="148" height="51"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x6S-wK-3T7">
+                        <rect key="frame" x="0.0" y="5.3333333333333321" width="80" height="40.666666666666671"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                        <color key="textColor" systemColor="systemRedColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NSo-69-pXC">
+                        <rect key="frame" x="0.0" y="50.666666666666664" width="148" height="0.3333333333333357"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="cqR-BB-09o"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="x6S-wK-3T7" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="2z3-on-iB2"/>
+                <constraint firstAttribute="bottom" secondItem="NSo-69-pXC" secondAttribute="bottom" id="AOh-o6-nnG"/>
+                <constraint firstItem="NSo-69-pXC" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="QvE-nA-rNR"/>
+                <constraint firstItem="x6S-wK-3T7" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Yk0-fK-0Ox"/>
+                <constraint firstAttribute="trailing" secondItem="NSo-69-pXC" secondAttribute="trailing" id="aVu-sG-A9P"/>
+            </constraints>
+            <size key="customSize" width="148" height="51"/>
+            <connections>
+                <outlet property="lblYear" destination="x6S-wK-3T7" id="fpW-iG-IfZ"/>
+            </connections>
+            <point key="canvasLocation" x="187.78625954198472" y="-10.91549295774648"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

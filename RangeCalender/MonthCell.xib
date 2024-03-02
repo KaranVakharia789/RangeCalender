@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MonthCellk" id="gTV-IL-0wX" customClass="MonthCell" customModule="RangeCalender" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="204" height="200"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="204" height="200"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MaM-yT-eAe">
+                        <rect key="frame" x="5" y="5" width="194" height="190"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FKG-1s-P5k">
+                                <rect key="frame" x="5" y="0.0" width="184" height="21.666666666666668"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wly-rr-hqt" customClass="JTACCellMonthView" customModule="JTAppleCalendar">
+                                <rect key="frame" x="5" y="26.666666666666671" width="184" height="158.33333333333331"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Wly-rr-hqt" secondAttribute="trailing" constant="5" id="3y6-x7-mWe"/>
+                            <constraint firstItem="FKG-1s-P5k" firstAttribute="leading" secondItem="MaM-yT-eAe" secondAttribute="leading" constant="5" id="4cG-Mt-PIu"/>
+                            <constraint firstItem="FKG-1s-P5k" firstAttribute="top" secondItem="MaM-yT-eAe" secondAttribute="top" id="B4G-r6-mXE"/>
+                            <constraint firstItem="Wly-rr-hqt" firstAttribute="leading" secondItem="MaM-yT-eAe" secondAttribute="leading" constant="5" id="IoY-uB-OUj"/>
+                            <constraint firstAttribute="trailing" secondItem="FKG-1s-P5k" secondAttribute="trailing" constant="5" id="bRO-80-LGi"/>
+                            <constraint firstItem="Wly-rr-hqt" firstAttribute="top" secondItem="FKG-1s-P5k" secondAttribute="bottom" constant="5" id="cIh-w4-LsZ"/>
+                            <constraint firstAttribute="bottom" secondItem="Wly-rr-hqt" secondAttribute="bottom" constant="5" id="dXK-Ah-XCg"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="MaM-yT-eAe" secondAttribute="trailing" constant="5" id="Mfo-WQ-3RC"/>
+                <constraint firstAttribute="bottom" secondItem="MaM-yT-eAe" secondAttribute="bottom" constant="5" id="fNy-kh-Tu8"/>
+                <constraint firstItem="MaM-yT-eAe" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="gqq-c2-ZlO"/>
+                <constraint firstItem="MaM-yT-eAe" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="vo7-ZT-sTQ"/>
+            </constraints>
+            <size key="customSize" width="204" height="200"/>
+            <connections>
+                <outlet property="lblMonth" destination="FKG-1s-P5k" id="qdc-L3-eEW"/>
+                <outlet property="monthView" destination="Wly-rr-hqt" id="2GA-Rd-7RD"/>
+            </connections>
+            <point key="canvasLocation" x="230.53435114503816" y="41.549295774647888"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

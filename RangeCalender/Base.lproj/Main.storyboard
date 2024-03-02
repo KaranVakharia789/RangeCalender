@@ -1,24 +1,112 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wnZ-tM-v2s">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RangeCalender" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XyS-51-zix">
+                                <rect key="frame" x="10" y="113" width="373" height="695"/>
+                                <subviews>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="j5r-6B-w3f" customClass="JTACYearView" customModule="JTAppleCalendar">
+                                        <rect key="frame" x="0.0" y="50" width="373" height="645"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="BCY-NG-pq8">
+                                            <size key="itemSize" width="156" height="135"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells/>
+                                        <connections>
+                                            <outlet property="ibCalendarDataSource" destination="8bC-Xf-vdC" id="Uru-FO-Dlz"/>
+                                        </connections>
+                                    </collectionView>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Year (ex. 2024)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GvK-JY-ePU">
+                                        <rect key="frame" x="5" y="5" width="278" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kxb-tJ-IJt">
+                                        <rect key="frame" x="293" y="5" width="75" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="lC0-6r-y4v"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="btnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UjX-5x-0IG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Kxb-tJ-IJt" secondAttribute="trailing" constant="5" id="7GC-o7-lg5"/>
+                                    <constraint firstItem="GvK-JY-ePU" firstAttribute="top" secondItem="XyS-51-zix" secondAttribute="top" constant="5" id="ENO-YT-u1F"/>
+                                    <constraint firstItem="Kxb-tJ-IJt" firstAttribute="leading" secondItem="GvK-JY-ePU" secondAttribute="trailing" constant="10" id="Fk5-JY-u8g"/>
+                                    <constraint firstItem="Kxb-tJ-IJt" firstAttribute="top" secondItem="XyS-51-zix" secondAttribute="top" constant="5" id="JvY-yD-NJh"/>
+                                    <constraint firstItem="j5r-6B-w3f" firstAttribute="top" secondItem="GvK-JY-ePU" secondAttribute="bottom" constant="5" id="QdT-Qt-hTU"/>
+                                    <constraint firstItem="GvK-JY-ePU" firstAttribute="leading" secondItem="XyS-51-zix" secondAttribute="leading" constant="5" id="TQX-Iq-Pe7"/>
+                                    <constraint firstItem="j5r-6B-w3f" firstAttribute="top" secondItem="Kxb-tJ-IJt" secondAttribute="bottom" constant="5" id="eit-HN-qqs"/>
+                                    <constraint firstAttribute="trailing" secondItem="j5r-6B-w3f" secondAttribute="trailing" id="gQ4-rT-5Pu"/>
+                                    <constraint firstItem="GvK-JY-ePU" firstAttribute="bottom" secondItem="Kxb-tJ-IJt" secondAttribute="bottom" id="lFq-Th-ZfO"/>
+                                    <constraint firstItem="j5r-6B-w3f" firstAttribute="leading" secondItem="XyS-51-zix" secondAttribute="leading" id="mM7-b4-XGM"/>
+                                    <constraint firstAttribute="bottom" secondItem="j5r-6B-w3f" secondAttribute="bottom" id="t7W-rD-sD8"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XyS-51-zix" secondAttribute="trailing" constant="10" id="DmO-Kc-tPB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XyS-51-zix" secondAttribute="bottom" constant="10" id="Hrd-0O-cQL"/>
+                            <constraint firstItem="XyS-51-zix" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="Ygr-Hy-Mvy"/>
+                            <constraint firstItem="XyS-51-zix" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="l3d-2m-df0"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="5UV-4m-s28"/>
+                    <connections>
+                        <outlet property="calendarView" destination="j5r-6B-w3f" id="yJu-bF-fnK"/>
+                        <outlet property="txtField" destination="GvK-JY-ePU" id="Ny9-4f-v1p"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1040.4580152671756" y="-27.464788732394368"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ioF-VO-XhN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wnZ-tM-v2s" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GPi-Ez-MKA">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="k2M-ji-rW3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A8j-pC-Mz8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="113.74045801526717" y="-27.464788732394368"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
